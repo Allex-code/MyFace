@@ -20,6 +20,7 @@ export default function Home() {
         <div className="left-nav">
           <Link href="/">Home</Link>
           <Link href="/user/Alex">Alex</Link>
+          <Link href="tic-tac-toe">Tic Tac Toe</Link>
           <Link href="/contact">Contact</Link>
           <Link href="/about">About</Link>
         </div>

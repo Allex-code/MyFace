@@ -10,7 +10,7 @@ export default function User({params}) {
   return (
     <div>
       <h1>User : {id}</h1>
-       <button onClick={router.back}>Go Back</button>
+      <button onClick={router.back}>Back</button>
     </div>
   )
 }
