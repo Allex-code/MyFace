@@ -17,12 +17,12 @@ export default function Home() {
   return (
     <div>
       <nav className="navbar">
-        <div className="left-nav">
-          <Link href="/">Home</Link>
-          <Link href="/user/Alex">Alex</Link>
-          <Link href="tic-tac-toe">Tic Tac Toe</Link>
-          <Link href="/contact">Contact</Link>
-          <Link href="/about">About</Link>
+        <div className="left-nav text-5x1 m-2">
+          <Link className="m-2" href="/">Home</Link>
+          <Link className="m-2" href="/user/Alex">Alex</Link>
+          <Link className="m-2" href="tic-tac-toe">Tic Tac Toe</Link>
+          <Link className="m-2" href="/contact">Contact</Link>
+          <Link className="m-2" href="/about">About</Link>
         </div>
         <div className="midle-nav"></div>
         <div className="right-nav">
