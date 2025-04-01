@@ -15,7 +15,7 @@ export default function Home() {
   }
  
   return (
-    <div>
+    <div className="text-5x1 m-2" >
       <nav className="navbar">
         <div className="left-nav text-5x1 m-2">
           <Link className="m-2" href="/">Home</Link>
@@ -24,18 +24,19 @@ export default function Home() {
           <Link className="m-2" href="/contact">Contact</Link>
           <Link className="m-2" href="/about">About</Link>
         </div>
-        <div className="midle-nav"></div>
-        <div className="right-nav">
+        <div className="midle-nav text-5x1 m-2"></div>
+        <div className="right-nav text-5x1 m-2">
           <input 
+            className="bg-gray-50 border ml-4 border-gray-300 pl-2 pr-2 text-gray-1000 text-sm rounded-lg focus:ring-blue-500"
             type="text" 
             placeholder="user id" 
             value={userID} 
             onChange={(e) => setUserID(e.target.value)}
           />
-          <button onClick={navigate}> Go to user Profile</button>
+          <button className="text-5x1 ml-4 button" onClick={navigate}> Go to user Profile</button>
         </div>
       </nav>
-      <h1>Home</h1>
+      <h1 className="ml-4" >HomePage</h1>
     </div>
   );
 }
