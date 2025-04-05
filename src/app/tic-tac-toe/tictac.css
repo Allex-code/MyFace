@@ -2,6 +2,10 @@
 
 .moves{
   scroll-margin-right: 0.25rem;
+  background-color: rgba(11, 211, 54, 0.773);
+  color: white;
+  outline:rgba(57, 58, 56, 0.773);
+  border-radius: .125rem;
 }
 
 .board-frame{

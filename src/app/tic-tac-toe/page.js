@@ -94,13 +94,12 @@ function calculateWinner(squares) {
   ];
 
   for (let i = 0; i < lines.length; i++) {
-    const [a,b,c,d] = lines[i];
+    const [a, b, c,d] = lines[i];
     if (squares[a] && squares[a] === squares[b] && squares[b] === squares[c] && squares[c] === squares[d]) {
-      console.log(squares[a])
-      console.log(squares[b])
       return squares[a];
     }
   }
+
   return null;
 }
 
@@ -121,22 +120,16 @@ export default function Game() {
     setCurrentMove(nextMove);
   }
 
-  const moves = history.map((squares, move) => {
-    let description;
-    if (move > 0) {
-      description = "Go to move # " + move;
-    } else {
-      description = "Go to clear board"
-    }
+  const moves = history.map((squares,move) => {
+    let description = move > 0 ? `Go to move #${move}` : "Go to clear board";
     return (
       <li key={move + Math.random()}>
-        <button className="inline-flex items-center rounded-md bg-green-100 px-2 py-2 text-s font-medium text-gray-600 ring-1 ring-gray-500/10 ring-inset" onClick={()=>jumpTo(move)}>{description}</button>  
+        <button className="moves inline-flex items-center rounded-md bg-green-100 px-2 py-2 text-s font-medium text-gray-600 ring-1 ring-gray-500/10 ring-inset" onClick={()=>jumpTo(move)}>{description}</button>  
       </li>
     );
   })
   
   const winner = calculateWinner(currentSquares)
-
 
   return (
     <div>
